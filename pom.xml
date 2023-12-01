@@ -34,8 +34,8 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/qos-ch/logback</url>
-    <connection>scm:git@github.com:qos-ch/logback.git</connection>
+    <url>https://github.com/SymphonyOSF/logback/</url>
+    <connection>scm:git@github.com:SymphonyOSF/logback.git</connection>
   </scm>
 
   <modules>
@@ -419,17 +419,19 @@
   </build>
 
   <distributionManagement>
-
-    <site>
-      <id>qos_ch</id>
-      <url>scp://te.qos.ch/var/www/logback.qos.ch/htdocs/</url>
-    </site>
-
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <uniqueVersion>false</uniqueVersion>
+      <id>symphony</id>
+      <name>symphony releases</name>
+      <url>https://repo.symphony.com/artifactory/libs-release-local</url>
+      <layout>default</layout>
     </repository>
-
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>snapshots</id>
+      <url>https://repo.symphony.com/artifactory/libs-snapshot-local</url>
+      <layout>default</layout>
+    </snapshotRepository>
   </distributionManagement>
 
   <profiles>
